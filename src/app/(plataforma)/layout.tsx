@@ -10,9 +10,6 @@ import DashboardIcon from "@icons/DashboardIcon.svg";
 import MenuIcon from "../../../public/icons/MenuIcon.svg";
 import LogOutIcon from "../../../public/icons/LogOutIcon.svg";
 
-// Cookies
-import Cookies from "universal-cookie";
-
 // Styles
 import styles from "./layout.module.scss";
 
@@ -29,17 +26,8 @@ interface RootLayoutProps {
 }
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-  const router = useRouter();
-  const cookies = new Cookies();
   const pathname = usePathname();
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-
-  // Verifica se tem um token disponível
-  // useEffect(() => {
-  //   if (!cookies.get("grt8_session_token")) {
-  //     router.push("/login");
-  //   }
-  // }, []);
+  const [openMenu, setOpenMenu] = useState<boolean>(true);
 
   return (
     <div className={[styles.layout, openMenu && styles.closed].join(" ")}>
@@ -50,8 +38,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             height={40}
             quality={100}
             unoptimized={true}
-            src={"/imgs/logo2white.png"}
-            alt="Logotipo da grt8"
+            src={"/imgs/logo.jpg"}
+            alt="Logotipo da focuson"
             className={styles.logo}
           />
         </div>
@@ -69,7 +57,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           <li className={styles.sair}>
             <Link
               href={"/login"}
-              onClick={() => cookies.remove("grt8_session_login")}
+              onClick={() =>
+                window.localStorage.removeItem("focuson_login_user")
+              }
             >
               <LogOutIcon /> <span>Sair</span>
             </Link>

@@ -55,29 +55,31 @@ const Login = () => {
           className={styles.logo}
         />
         <div className={styles.formGroup}>
-          <label>Usuário</label>
+          <label htmlFor="email">Usuário</label>
           <div>
             <input
+              id="email"
               type="text"
               name="email"
               required
               tabIndex={1}
               placeholder="Insira o e-mail"
-              autoComplete="off"
+              autoComplete="usuario"
               onChange={handleLogin}
             />
             <ProfileIcon />
           </div>
         </div>
         <div className={styles.formGroup}>
-          <label>Senha</label>
+          <label htmlFor="current-password">Senha</label>
           <div>
             <input
+              id="current-password"
               type="password"
               name="senha"
               required
               tabIndex={2}
-              autoComplete="off"
+              autoComplete="current-password"
               placeholder="Insira sua senha"
               onChange={handleLogin}
             />
@@ -90,7 +92,7 @@ const Login = () => {
           disabled={!(login.email && login.senha)}
           className={!(login.email && login.senha) ? styles.disabled : ""}
         >
-          Login
+          Fazer login
         </button>
       </form>
       <div className={styles.image}>

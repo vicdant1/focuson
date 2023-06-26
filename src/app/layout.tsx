@@ -4,13 +4,12 @@ import { ReactNode } from "react";
 import { Toast } from "@components/Toast";
 
 export const metadata = {
-  title: "Dashboard",
-  description: "Dashboard centralizado grt8",
+  title: "Focus On",
+  description: "Plataforma digital de aprendizado",
 };
 
 // Fonts
 import { Montserrat } from "next/font/google";
-
 const montserrat = Montserrat({
   weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],

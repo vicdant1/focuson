@@ -9,13 +9,13 @@
     bottom: 0;
     width: 100%;
     max-width: 250px;
-    background-color: var(--purple);
+    background-color: var(--orange);
     transition: .3s ease-in-out;
     overflow: hidden;
     z-index: 10;
   
     .logo2{
-      background-color: var(--dark-purple);
+      background-color: var(--dark-orange);
       padding: 1rem 0;
       height: 70px;
       margin-bottom: 0.3rem;
@@ -68,7 +68,7 @@
         &:hover, &.active{
           a{
             background-color: var(--light-gray);
-            color: var(--purple);
+            color: var(--orange);
           }
         }
       }
@@ -76,9 +76,9 @@
       li:not(:last-child):hover, li.active{
         a{
           svg{
-            fill: var(--purple)!important;
+            fill: var(--orange)!important;
             path {
-              fill: var(--purple)!important;
+              fill: var(--orange)!important;
             }
           }
         }
@@ -92,7 +92,7 @@
         &:hover{
           svg{
             path{
-              stroke: var(--purple);
+              stroke: var(--orange);
             }
           }
         }

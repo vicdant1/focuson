@@ -1,10 +1,26 @@
 [
   {
     "email": "dantjv@outlook.com", 
-    "senha": "123456"
+    "senha": "123456",
+    "nome": "João Victor",    
+    "permissoes": ["admin", "professor", "aluno"]
   },
   {
-    "email": "pedrolgois1@gmail.com", 
-    "senha": "admin1234"
+    "email": "admin@admin.com", 
+    "senha": "admin1234",
+    "nome": "Admnistrador",
+    "permissoes": ["admin", "professor", "aluno"]
+  },
+  {
+    "email": "professor01@gmail.com", 
+    "senha": "admin1234",
+    "nome": "Professor 01",
+    "permissoes": ["professor"]
+  },
+  {
+    "email": "aluno01@gmail.com", 
+    "senha": "admin1234",
+    "nome": "Aluno 01",
+    "permissoes": ["aluno"]
   }
 ]
