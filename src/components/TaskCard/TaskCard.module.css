@@ -1,0 +1,21 @@
+.root {
+  min-width: 10px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 'bold';
+}
+.stars {
+  display: 'flex';
+  align-items: 'center';
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.difficulty {
+  margin-bottom: 8px;
+}
+.label {
+  margin-right: 4px;
+}
