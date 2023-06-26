@@ -27,6 +27,9 @@
       ],
       "@icons/*": [
         "./public/icons/*"
+      ],
+      "@mocks/*": [
+        "./public/mocks/*"
       ]
     },
     "plugins": [

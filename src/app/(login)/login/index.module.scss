@@ -16,6 +16,9 @@
     img.logo{
       margin: 1rem auto 2rem;
       object-fit: contain;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
     }
 
     .formGroup{
@@ -36,7 +39,7 @@
         transition: .2s;
 
         &:focus-within{
-          box-shadow: 0 2px 4px rgba(255, 0, 191, 0.2);
+          box-shadow: 0 2px 4px #e5431f65;
         }
 
         input{
@@ -49,7 +52,7 @@
         }
 
         svg{
-          background: #DD2474;
+          background: var(--orange);
           height: 100%;
           padding: .8rem;
           path{
@@ -64,36 +67,34 @@
       width: 100%;
       max-width: 350px;
       height: 50px; 
-      background: #6A1376;
+      background: var(--orange);
       text-align: center;
       font-weight: bold;
       border-radius: 5px;
       margin: 2.5rem 0;
       cursor: pointer;
-      box-shadow: 0px 6px 10px rgba(119, 0, 117, 0.3);
+      box-shadow: 0px 6px 10px #e5421f73;
       transition: .2s;
       color: #fff;
     
       &:focus, &:hover{
-        box-shadow: 0px 0px 15px rgba(255, 0, 187, 0.6);
-        background-color: #DD2474;
+        box-shadow: 0px 0px 15px #e5421fc2;
+        background-color: #f12b00;
       }
     }
     
   }
 
-  > div{
+   div.image{
     flex: 75%;
-    display: grid;
-    place-items: center;
+    position: relative;
     background-color: #F1F3F6;
 
     img{
       width: 100%;
-      max-width: 600px;
       height: 100%;
       max-height: 100svh;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }

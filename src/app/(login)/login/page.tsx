@@ -8,24 +8,20 @@ import { useRouter } from "next/navigation";
 import ProfileIcon from "@icons/ProfileIcon.svg";
 import LockIcon from "@icons/LockIcon.svg";
 
-// Toast
-import { toast } from "react-toastify";
-
-// Cookies
-import Cookies from "universal-cookie";
-
 // Styles
 import styles from "./index.module.scss";
 
+// Mocks
+import allowedLogins from "@mocks/allowedLogins.json";
+import { toast } from "react-toastify";
+
 const Login = () => {
-  const cookies = new Cookies();
   const router = useRouter();
   const defaultLoginData = {
     email: "",
     senha: "",
   };
   const [login, setLogin] = useState(defaultLoginData);
-  const [submitLoading, setSubmitLoading] = useState(false);
 
   const handleLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -34,9 +30,16 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitLoading(true);
-    cookies.set("grt8_session_token", "teste", { maxAge: 60 * 60 * 3 });
-    router.push("/");
+    const loginAutenticado = allowedLogins.find(
+      (aLogin) => aLogin.email === login.email && aLogin.senha === login.senha
+    );
+    if (loginAutenticado) {
+      window.localStorage.setItem("focuson_login_user", JSON.stringify(login));
+      toast.success("Login realizado com sucesso!");
+      router.push("/");
+      return;
+    }
+    toast.error("Usuário ou senha incorretos!");
   };
 
   return (
@@ -84,7 +87,7 @@ const Login = () => {
         <button
           tabIndex={3}
           type="submit"
-          disabled={!(login.email && login.senha) || submitLoading}
+          disabled={!(login.email && login.senha)}
           className={!(login.email && login.senha) ? styles.disabled : ""}
         >
           Login
@@ -92,11 +95,10 @@ const Login = () => {
       </form>
       <div className={styles.image}>
         <Image
-          width={600}
-          height={600}
+          layout="fill"
           quality={100}
           unoptimized={true}
-          src={"/imgs/login-bg.png"}
+          src={"/imgs/login-bg.jpg"}
           alt="Ilustração de pessoa utilizando o sistema"
         />
       </div>
