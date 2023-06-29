@@ -86,7 +86,7 @@ export default function CreateOrEditTaskModal({open, setOpen}:IModalProps) {
               labelId="series-label"
             >
               {mathTopics.map((topic, index) => (
-                <MenuItem value={index}>
+                <MenuItem value={index} key={index}>
                   <Typography variant="body1">{topic}</Typography>
                 </MenuItem>
               ))}

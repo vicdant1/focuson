@@ -9,6 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 import DashboardIcon from "@icons/DashboardIcon.svg";
 import MenuIcon from "../../../public/icons/MenuIcon.svg";
 import LogOutIcon from "../../../public/icons/LogOutIcon.svg";
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 // Styles
 import styles from "./layout.module.scss";
@@ -18,6 +19,11 @@ export const pagesList = [
     icon: <DashboardIcon />,
     name: "Dashboard",
     url: "/",
+  },
+  {
+    icon: <TaskAltIcon />,
+    name: "Tarefas",
+    url: "/tarefas",
   },
 ];
 
@@ -44,9 +50,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           />
         </div>
         <ul>
-          {pagesList.map((page) => (
+          {pagesList.map((page, i) => (
             <li
-              key={page.name}
+              key={i}
               className={pathname == page.url ? styles.active : ""}
             >
               <Link href={page.url}>

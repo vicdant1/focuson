@@ -120,12 +120,10 @@ const Tarefas = () => {
     },
   ];
 
-  // Adicione
-
   return (
     <Box mt={2} px={4}>
-      <Typography variant="h5">Tarefas</Typography>
-      <Box display="flex" alignItems="center" justifyContent="end">
+      <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
+        <Typography variant="h5">Tarefas</Typography>
         <IconButton
           aria-label="delete"
           size="large"
@@ -138,13 +136,13 @@ const Tarefas = () => {
       <CreateOrEditTaskModal open={open} setOpen={setOpen} />
       <Grid container spacing={2}>
         {tasks.map((task, i) => (
-          <Grid item xs={2}>
+          <Grid item xs={12} sm={6} md={4} key={i}>
             <TaskCard
               difficulty={task.difficulty}
               quality={task.quality}
               subject={task.subject}
               title={task.title}
-              key={i}
+              id={i}
             />
           </Grid>
         ))}
