@@ -1,6 +1,6 @@
 [
   {
-    "email": "dantjv@outlook.com", 
+    "email": "dantjv@outlook.caom", 
     "senha": "123456",
     "nome": "João Victor",    
     "permissoes": ["admin", "professor", "aluno"]
