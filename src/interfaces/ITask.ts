@@ -5,5 +5,4 @@ export interface ITask {
     displayText: string;
     order: number;
   }[];
-  operations: string[];
 }

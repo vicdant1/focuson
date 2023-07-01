@@ -11,6 +11,7 @@ const SolvingElement = ({ expression }: ISolvingElementProps) => {
         borderRadius={4}
         sx={{
           backgroundColor: "#FFA",
+          cursor: "move"
         }}
       >
         {expression}
