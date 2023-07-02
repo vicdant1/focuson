@@ -5,5 +5,6 @@ export interface ITask {
   steps: {
     displayText: string;
     order: number;
+    id: number
   }[];
 }
