@@ -1,6 +1,7 @@
 [
   {
     "name": "Atividade teste 1",
+    "song": "allaturca",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro minima quibusdam ratione quo at officiis, aliquam officia assumenda odit quis fugiat fuga tempora inventore temporibus reprehenderit similique quia explicabo quaerat beatae ullam vel! Dicta rerum ipsum hic voluptatum!",
     "steps": [{
       "displayText": "1",
@@ -24,7 +25,8 @@
     }]
   },
   {
-    "name": "Atividade teste 2",
+    "name": "Atividade teste 2 (ordem errada de proposito)",
+    "song": "allaturca",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro minima quibusdam ratione quo at officiis, aliquam officia assumenda odit quis fugiat fuga tempora inventore temporibus reprehenderit similique quia explicabo quaerat beatae ullam vel! Dicta rerum ipsum hic voluptatum!",
     "steps": [{
       "displayText": "1",
@@ -35,36 +37,12 @@
       "order": 1
     },
     {
-      "displayText": "1",
-      "order": 2
-    },
-    {
       "displayText": "=",
       "order": 3
     },
     {
-      "displayText": "2",
-      "order": 4
-    }]
-  },
-  {
-    "name": "Atividade teste 3",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro minima quibusdam ratione quo at officiis, aliquam officia assumenda odit quis fugiat fuga tempora inventore temporibus reprehenderit similique quia explicabo quaerat beatae ullam vel! Dicta rerum ipsum hic voluptatum!",
-    "steps": [{
-      "displayText": "1",
-      "order": 0
-    },
-    {
-      "displayText": "+",
-      "order": 1
-    },
-    {
       "displayText": "1",
       "order": 2
-    },
-    {
-      "displayText": "=",
-      "order": 3
     },
     {
       "displayText": "2",

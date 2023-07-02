@@ -2,11 +2,12 @@
 
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
 import Link from "next/link";
 import SolvingElement from "@/components/SolvingElement/SolvingElement";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { toast } from "react-toastify";
-
 
 import presetTasks from "@mocks/tasks.json";
 import { ITask } from "@/interfaces/ITask";
@@ -24,24 +25,60 @@ export default function Task({ params: { task } }: ITaskPageParams) {
   const tasks: ITask[] = presetTasks;
   const currentTaskIndex = Math.floor(task % tasks.length);
   const [currentTask, setCurrentTask] = useState<ITask>(presetTasks[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleExpressionValidation = () => {
     let isOrdered = true;
-    for(let i = 0; i < currentTask.steps.length; i++){
-      if(i + 1 > currentTask.steps.length - 1) break
+    for (let i = 0; i < currentTask.steps.length; i++) {
+      if (i + 1 > currentTask.steps.length - 1) break;
 
-      if(currentTask.steps[i].order >= currentTask.steps[i + 1].order)
+      if (currentTask.steps[i].order >= currentTask.steps[i + 1].order)
         isOrdered = false;
     }
 
-    if(isOrdered)
-      toast.success("Expressão ordenada corretamente!");
-    else
-      toast.error("Não foi dessa vez, tente novamente!");
-  }
+    if (isOrdered) toast.success("Expressão ordenada corretamente!");
+    else toast.error("Não foi dessa vez, tente novamente!");
+  };
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+
+    let audionames: string[] = []
+
+    console.log(currentTask.steps)
+
+    currentTask.steps.map(step => {
+      let filename = currentTask.song + (step.order + 1)
+      audionames.push(filename)
+    });
+
+    const audio1 = new Audio(`/mocks/${audionames[0]}.mp3`);
+    audio1.play();
+
+    audio1.addEventListener('ended', () => {
+      const audio2 = new Audio(`/mocks/${audionames[1]}.mp3`);
+      audio2.play();
+
+      audio2.addEventListener('ended', () => {
+        const audio3 = new Audio(`/mocks/${audionames[2]}.mp3`);
+        audio3.play();
+
+        audio3.addEventListener('ended', () => {
+          const audio4 = new Audio(`/mocks/${audionames[3]}.mp3`);
+          audio4.play();
+
+          audio4.addEventListener('ended', () => {
+            const audio5 = new Audio(`/mocks/${audionames[4]}.mp3`);
+            audio5.play();
+          })
+        })
+
+      })
+    });
+  };
 
   useEffect(() => {
-    setCurrentTask(presetTasks[currentTaskIndex]);    
+    setCurrentTask(presetTasks[currentTaskIndex]);
   }, []);
 
   return (
@@ -75,10 +112,17 @@ export default function Task({ params: { task } }: ITaskPageParams) {
           <Typography>{currentTask.description}</Typography>
           <Divider />
 
-          <Box
-            mt={2}
-          >
-            <Typography variant="h5">Expressão final</Typography>
+          <Box mt={4}>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Typography variant="h5">Expressão final</Typography>
+              <IconButton onClick={handlePlay}>
+                <PlayArrowIcon />
+              </IconButton>
+            </Box>
             <Box
               my={2}
               borderRadius={2}
