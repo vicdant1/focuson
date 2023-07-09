@@ -1,20 +1,27 @@
 [
   {
-    "name": "Atividade teste 1 (alla turca)",
+    "name": "Subtração negativa",
     "song": "allaturca",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro minima quibusdam ratione quo at officiis, aliquam officia assumenda odit quis fugiat fuga tempora inventore temporibus reprehenderit similique quia explicabo quaerat beatae ullam vel! Dicta rerum ipsum hic voluptatum!",
-    "steps": [{
-      "displayText": "1",
-      "order": 0,
-      "id": 0
-    },
+    "description": "No mundo nos números negativos é importante sabermos de conceitos fundamentais sobre números e a reta numérica. É possível fazer operações naturais com números negativos! Organize os blocos a baixo de maneira a fazer com que a expressão seja válida!",
+    "tip": "devemos realizar a operação e conservar o sinal do maior.",
+    "steps": [
     {
-      "displayText": "+",
+      "displayText": "-",
       "order": 1,
       "id": 1
     },
     {
-      "displayText": "1",
+      "displayText": "2",
+      "order": 0,
+      "id": 0
+    },
+    {
+      "displayText": "-2",
+      "order": 4,
+      "id": 4
+    },
+    {
+      "displayText": "4",
       "order": 2,
       "id": 2
     },
@@ -22,41 +29,38 @@
       "displayText": "=",
       "order": 3,
       "id": 3
-    },
-    {
-      "displayText": "2",
-      "order": 4,
-      "id": 4
     }]
   },
   {
-    "name": "Atividade teste 2 (fur elise)",
+    "name": "Multiplicação negativa",
     "song": "furelise",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro minima quibusdam ratione quo at officiis, aliquam officia assumenda odit quis fugiat fuga tempora inventore temporibus reprehenderit similique quia explicabo quaerat beatae ullam vel! Dicta rerum ipsum hic voluptatum!",
-    "steps": [{
-      "displayText": "1",
-      "order": 0,
-      "id": 0
-    },
+    "description": "No mundo dos números negativos, também podemos realizar operações de multiplicação. Organize os blocos abaixo para formar uma expressão válida!",
+    "tip": "Lembre-se de que o produto de dois números com sinais iguais é sempre positivo, e o produto de dois números com sinais diferentes é sempre negativo.",
+    "steps": [
     {
-      "displayText": "+",
+      "displayText": "*",
       "order": 1,
       "id": 1
     },
     {
-      "displayText": "1",
+      "displayText": "3",
+      "order": 0,
+      "id": 0
+    },
+    {
+      "displayText": "-2",
       "order": 2,
       "id": 2
+    },
+    {
+      "displayText": "-6",
+      "order": 4,
+      "id": 4
     },
     {
       "displayText": "=",
       "order": 3,
       "id": 3
-    },
-    {
-      "displayText": "2",
-      "order": 4,
-      "id": 4
     }]
   }
 ]

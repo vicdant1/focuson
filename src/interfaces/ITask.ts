@@ -7,4 +7,5 @@ export interface ITask {
     order: number;
     id: number
   }[];
+  tip: string;
 }

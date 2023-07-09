@@ -3,6 +3,7 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import HelpIcon from '@mui/icons-material/Help';
 import Link from "next/link";
 import SolvingElement from "@/components/SolvingElement/SolvingElement";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -28,6 +29,7 @@ export default function Task({ params: { task } }: ITaskPageParams) {
   const tasks: ITask[] = presetTasks;
   const currentTaskIndex = Math.floor(task % tasks.length);
   const [currentTask, setCurrentTask] = useState<ITask>(presetTasks[0]);
+  const [operationCount, setOperationCount] = useState<number>(0);
 
   const handleExpressionValidation = () => {
     let isOrdered = true;
@@ -41,6 +43,11 @@ export default function Task({ params: { task } }: ITaskPageParams) {
     if (isOrdered) toast.success("Expressão ordenada corretamente!");
     else toast.error("Não foi dessa vez, tente novamente!");
   };
+
+
+  const handleHelpAsk = () => {
+    toast.info(currentTask.tip)
+  }
 
   const handlePlay = () => {
     let audionames: string[] = [];
@@ -77,6 +84,8 @@ export default function Task({ params: { task } }: ITaskPageParams) {
   };
 
   const handleDragEnd = (event: any) => {
+    setOperationCount(operationCount+1)
+
     const { active, over } = event;
     const oldIndex = currentTask.steps.findIndex(
       (step) => step.id === active.id
@@ -132,9 +141,15 @@ export default function Task({ params: { task } }: ITaskPageParams) {
               justifyContent="space-between"
             >
               <Typography variant="h5">Expressão final</Typography>
-              <IconButton onClick={handlePlay}>
-                <PlayArrowIcon />
-              </IconButton>
+
+              <Box>
+                <IconButton onClick={handleHelpAsk} disabled={operationCount < 5}>
+                  <HelpIcon />
+                </IconButton>
+                <IconButton onClick={handlePlay}>
+                  <PlayArrowIcon />
+                </IconButton>
+              </Box>
             </Box>
 
             <DndContext
