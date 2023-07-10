@@ -82,3 +82,70 @@ span.MuiStepLabel-iconContainer.Mui-active.MuiStepLabel-alternativeLabel.css-vnk
   height: 50px;
 
 }
+
+.imgPefil{
+  border-radius: 50%;
+}
+
+.title{
+  margin-bottom: 2rem;
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+
+  &::after{
+    display: block;
+    content: '';
+    height: 3px;
+    width: 60px;
+    background-color: orange;
+  }
+}
+
+.testt{
+  display: flex;
+  gap: 2rem;
+
+  ul{
+    flex: 1;
+    list-style: none;
+    padding: 0;
+
+    li{
+      border-bottom: 1px solid gray;
+      margin: 1rem auto;
+      span{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+.cards{
+  padding: 2rem 0;
+
+  .card{
+    background: #e12900;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    height: 200px;
+    box-shadow: 0 0 15px #00000042;
+    flex-direction: column;
+    
+    svg{
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
