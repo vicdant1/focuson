@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "@/components/Navbar/Navbar";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import CreateOrEditTaskModal from "@/components/CreateOrEditTaskModal/CreateOrEditTaskModal";
@@ -122,7 +121,12 @@ const Tarefas = () => {
 
   return (
     <Box mt={2} px={4}>
-      <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        mb={2}
+      >
         <Typography variant="h5">Tarefas</Typography>
         <IconButton
           aria-label="delete"
