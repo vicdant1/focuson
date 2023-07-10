@@ -1,13 +1,13 @@
-import Navbar from "@/components/Navbar/Navbar";
+'use client'
+
 import { Box } from "@mui/material";
 
 const Material = () => {
-  return <>
-    <Navbar/>
-    <Box mt={2} px={4}>
-
-    </Box>
-  </>
-}
+  return (
+    <>
+      <Box mt={2} px={4}></Box>
+    </>
+  );
+};
 
 export default Material;

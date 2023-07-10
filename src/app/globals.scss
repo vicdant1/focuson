@@ -29,3 +29,56 @@ body {
     color-scheme: dark;
   }
 }
+
+.css-vnkopk-MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel{
+  box-shadow: 10px 5px 10px #0000004b;
+}
+
+.css-n7tliy-MuiStep-root:first-child .css-vnkopk-MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel{
+  border-radius: 15px 0 0 15px;
+}
+
+.css-n7tliy-MuiStep-root:last-child .css-vnkopk-MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel{
+  border-radius: 0 15px 15px 0;
+}
+
+.QontoStepIcon-circle {
+  width: 25px!important;
+  height: 25px!important;
+  color: #262626a6;
+}
+
+span.MuiStepLabel-iconContainer.Mui-active.MuiStepLabel-alternativeLabel.css-vnkopk-MuiStepLabel-iconContainer .QontoStepIcon-circle{
+  color: #fff!important;
+}
+
+.css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+  color: #484848;
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.css-n7tliy-MuiStep-root:first-child .css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+  color: #fff
+}
+
+.css-10mg1vw-MuiStepper-root{
+  
+}
+
+.css-n7tliy-MuiStep-root{
+  padding: 0;
+}
+
+.css-vnkopk-MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+  background:#e12900;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+}
