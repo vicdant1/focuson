@@ -2,15 +2,18 @@
   display: grid;
   place-items: center;
   height: 100vh;
+  background: var(--orange);
 
   .container{
     width: 100%;
     max-width: 1200px;
     background-color: #f7f7f7;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
     height: 800px;
     position: relative;
     display: flex;
+    border-radius: 25px;
+    overflow: hidden;
 
     header{
       width: 100%;
@@ -58,6 +61,63 @@
       width: 60%;
       padding: 2rem;
       padding-top: 200px;
+
+      form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .formGroup{
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          margin: .6rem 0;
+
+          label{
+            font-size: .9rem;
+            font-weight: bold;
+          }
+
+          input, select{
+            background: #dbdbdb;
+            color: black;
+            height: 36px;
+            width: 360px;
+            border: 0;
+            border-radius: 10px;
+            padding: 0 1rem;
+          }
+        }
+      }
+
+      .buttons{
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        button{
+          background: var(--orange);
+          color: #fff;
+          border: 0;
+          border-radius: 10px;
+          padding: .5rem 1rem;
+          font-weight: bold;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+
+          &:hover{
+            filter: brightness(.9);
+          }
+
+          &:disabled{
+            opacity: .5;
+            cursor: not-allowed;
+          }
+        }
+      }
     }
   }
 }
