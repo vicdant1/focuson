@@ -19,6 +19,16 @@ export const pagesList = [
     name: "Dashboard",
     url: "/",
   },
+  {
+    icon: <DashboardIcon />,
+    name: "Material",
+    url: "/material",
+  },
+  {
+    icon: <DashboardIcon />,
+    name: "Tarefas",
+    url: "/tarefas",
+  },
 ];
 
 interface RootLayoutProps {

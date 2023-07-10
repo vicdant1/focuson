@@ -1,0 +1,63 @@
+.cadastro{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    height: 800px;
+    position: relative;
+    display: flex;
+
+    header{
+      width: 100%;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      gap: 2rem;
+      align-items: center;
+      
+      img{
+        width: 150px;
+        object-fit: contain;
+        height: auto;
+      }
+    }
+    .details{
+      flex: 0 0 35%;
+      width: 35%;
+      border-radius: 0 80px 80px 0;
+      background: url('/imgs/cadastro-bg.jpg') no-repeat center center / cover;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.263);
+      padding: 2rem;
+      padding-top: 200px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h1{
+        color: #fff;
+        font-size: 2rem;
+        line-height: 120%;
+      }
+
+      a{
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+    .info{
+      flex: 0 0 60%;
+      width: 60%;
+      padding: 2rem;
+      padding-top: 200px;
+    }
+  }
+}
